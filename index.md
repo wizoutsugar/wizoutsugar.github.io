@@ -4,7 +4,7 @@ layout: content
 <head>
     <title> home</title>
 </head>
-<center>haao@null:~/research# cat manifesto</center>
+<center>dev@shm:~/nowhere# cat proof.txt</center>
 <br>
 <pre>
              *     ,MMM8&&&.            *
@@ -13,8 +13,8 @@ layout: content
      *           MMM88&&&&&&&&
                  MMM88&&&&&&&&
                  'MMM88&&&&&&'
-                   'MMM8&&&'      *   A growing collection of notes and writeups as we continue 
-                                                           our journey. ~ <span>HAAO</span>
+                   'MMM8&&&'      *   An InfoSec guy who's spend a significant amount of time reading security stuff.  
+                                                           . ~ <span>MEAAW</span>
           |\___/|                                       
           )     (             .              '
          =\     /=

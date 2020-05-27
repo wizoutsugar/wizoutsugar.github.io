@@ -1,10 +1,10 @@
 ---
 layout: blog
-title: "bug_bounty_writeups"
+title: "General Notes"
 permalink: /notes/
 ---
 <head>
-    <title> bug_bounty_writeups </title>
+    <title> General Notes </title>
 </head>
 
 <ul class="posts">
