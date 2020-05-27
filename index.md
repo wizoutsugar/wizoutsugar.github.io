@@ -4,7 +4,7 @@ layout: content
 <head>
     <title> WizoutSugar</title>
 </head>
-<center>root@shm:~/dev/shm# cat bloginfo.txt</center>
+<center>root@shm:~/dev/shm# cat whoami.txt</center>
 <br>
 <pre>
              *     ,MMM8&&&.            *
@@ -13,8 +13,9 @@ layout: content
      *           MMM88&&&&&&&&
                  MMM88&&&&&&&&
                  'MMM88&&&&&&'
-                   'MMM8&&&'      *   Here's where I dump all my ideas and things I learn. 
-
+                   'MMM8&&&'      *   An InfoSec guy who's spend a significant amount of time 
+						reading security stuff.
+				~ <span>Here's where I dump all my ideas and things I learn.</span>
           |\___/|                                       
           )     (             .              '
          =\     /=
