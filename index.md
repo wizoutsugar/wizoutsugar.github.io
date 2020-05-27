@@ -2,7 +2,7 @@
 layout: content
 ---
 <head>
-    <title> WizoutSugar</title>
+    <title> WizoutSugar </title>
 </head>
 <center>root@shm:~/dev/shm# whoami && cat cert.txt </center>
 <br>

@@ -1,14 +1,13 @@
 ---
 layout: blog
-title: "General Notes"
-permalink: /SecNotes/
+title: "HTB"
+permalink: /htb/
 ---
 <head>
-    <title> General Notes </title>
+    <title> HackThebox </title>
 </head>
-
 <ul class="posts">
-    {% for post in site.categories.notes %}
+    {% for post in site.categories.htb %}
         <li>
             <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
             ::
