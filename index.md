@@ -16,7 +16,6 @@ layout: content
                    'MMM8&&&'      *   An InfoSec guy who's spend a significant amount of time 
 						reading security stuff.
 				      ~ <span>Here's where I dump all my ideas and things I learn.</span>
-					<div class="text-green mb-2 ml-4"> eJPT | eCPPT | eWPT | eWPTX</div>
           |\___/|                          <span>eJPT | eCPPT | eWPT | eWPTX</span>
           )     (             .              '
          =\     /=
