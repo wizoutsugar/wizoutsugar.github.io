@@ -14,7 +14,7 @@ layout: content
                  MMM88&&&&&&&&
                  'MMM88&&&&&&'
                    'MMM8&&&'      *   An InfoSec guy who's spend a significant amount of time reading security stuff.
-															~ <span>MEAAWW</span>
+								~ <span>MEAAWW</span>
           |\___/|                                       
           )     (             .              '
          =\     /=
