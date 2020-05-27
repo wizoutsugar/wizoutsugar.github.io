@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: "General Notes"
-permalink: /notes/
+permalink: /SecNotes/
 ---
 <head>
     <title> General Notes </title>
