@@ -4,7 +4,7 @@ layout: content
 <head>
     <title> WizoutSugar</title>
 </head>
-<center>root@shm:~/dev/shm# cat whoami.txt</center>
+<center>root@shm:~/dev/shm# whoami && cat cert.txt </center>
 <br>
 <pre>
              *     ,MMM8&&&.            *
@@ -16,7 +16,7 @@ layout: content
                    'MMM8&&&'      *   An InfoSec guy who's spend a significant amount of time 
 						reading security stuff.
 				      ~ <span>Here's where I dump all my ideas and things I learn.</span>
-          |\___/|                                       
+          |\___/|                            	 eJPT | eCPPT | eWPT | eWPTX
           )     (             .              '
          =\     /=
            )===(       *
