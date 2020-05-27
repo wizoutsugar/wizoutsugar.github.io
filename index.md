@@ -15,7 +15,7 @@ layout: content
                  'MMM88&&&&&&'
                    'MMM8&&&'      *   An InfoSec guy who's spend a significant amount of time 
 						reading security stuff.
-				~ <span>Here's where I dump all my ideas and things I learn.</span>
+				      ~ <span>Here's where I dump all my ideas and things I learn.</span>
           |\___/|                                       
           )     (             .              '
          =\     /=
