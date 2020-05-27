@@ -1,0 +1,11 @@
+# Site settings
+title: "~/wizoutsugar's blog"
+bye_message: ""
+baseurl: "/"
+url: "https://wizoutsugar.github.io"
+disqus: 
+
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
