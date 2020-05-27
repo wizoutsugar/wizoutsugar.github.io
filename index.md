@@ -16,7 +16,7 @@ layout: content
                    'MMM8&&&'      *   An InfoSec guy who's spend a significant amount of time 
 						reading security stuff.
 				      ~ <span>Here's where I dump all my ideas and things I learn.</span>
-          |\___/|                            	 eJPT | eCPPT | eWPT | eWPTX
+          |\___/|                            	<span>eJPT | eCPPT | eWPT | eWPTX</span>
           )     (             .              '
          =\     /=
            )===(       *
