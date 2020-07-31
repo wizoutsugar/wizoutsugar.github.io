@@ -1,14 +1,14 @@
 ---
 layout: blog
-title: "VulnHub"
-permalink: /vulnhub/
+title: "Bug Bounty"
+permalink: /bugbounty/
 ---
 <head>
-    <title> VulnHub </title>
+    <title> Bug Bounty </title>
 </head>
 
 <ul class="posts">
-    {% for post in site.categories.VulnHub %}
+    {% for post in site.categories.bugbounty %}
         <li>
             <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
             ::
