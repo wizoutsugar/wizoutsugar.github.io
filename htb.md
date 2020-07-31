@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "HTB"
+title: "CTF"
 permalink: /ctf/
 ---
 <head>
