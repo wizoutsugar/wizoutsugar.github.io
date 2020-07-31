@@ -1,13 +1,13 @@
 ---
 layout: blog
 title: "HTB"
-permalink: /htb/
+permalink: /ctf/
 ---
 <head>
-    <title> HackThebox </title>
+    <title> CTF </title>
 </head>
 <ul class="posts">
-    {% for post in site.categories.htb %}
+    {% for post in site.categories.ctf %}
         <li>
             <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
             ::
