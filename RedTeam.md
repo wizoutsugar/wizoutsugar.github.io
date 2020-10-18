@@ -1,13 +1,13 @@
 ---
 layout: blog
-title: "CTF"
-permalink: /ctf/
+title: "RedTeam"
+permalink: /RedTeam/
 ---
 <head>
-    <title> CTF </title>
+    <title> RedTeam </title>
 </head>
 <ul class="posts">
-    {% for post in site.categories.ctf %}
+    {% for post in site.categories.RedTeam %}
         <li>
             <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
             ::
