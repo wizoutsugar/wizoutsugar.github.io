@@ -15,7 +15,7 @@ layout: content
                  'MMM88&&&&&&'
                    'MMM8&&&'      *   An InfoSec guy who's spend a significant amount of time 
 						reading security stuff.
-				      ~ <span>Here's where I dump all my ideas and things I learn.</span>
+				      ~ Here's where I dump all my ideas and things I learn.
           |\___/|                          <span>eJPT | eCPPTv2 | eWPTv1 | eWPTXv2 | CRTP | OSWP | OSCP</span>
           )     (             .              '
          =\     /=
