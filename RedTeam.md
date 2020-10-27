@@ -1,10 +1,10 @@
 ---
 layout: blog
-title: "RedTeam"
+title: "Red Team"
 permalink: /RedTeam/
 ---
 <head>
-    <title> RedTeam </title>
+    <title> Red Team </title>
 </head>
 <ul class="posts">
     {% for post in site.categories.RedTeam %}

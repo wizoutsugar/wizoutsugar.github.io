@@ -224,3 +224,9 @@ blockquote {
 margin: unset;
     font-size: 12px;
 }
+
+.cert{
+    color: #990000;
+    font-size: medium;
+    font-weight: bold;
+}
