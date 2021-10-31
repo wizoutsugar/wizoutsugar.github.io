@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>
+        Introduction To Red Team ::
+        WizoutSugar&#39;s Blog
+      </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="1. Red Team  The purpose of a red team is to simulate a genuine, real-life threat to an organisation to improve people, processes and technology. They&amp;rsquo;re given a specific goal:  Demonstrating access to business-critical information or measure blue teams&#39; detection and response policies and will identify gaps in the organisation&amp;rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization."
+/>
+<meta
+  name="keywords"
+  content=""
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://wizoutsugar.github.io/posts/2021/10/introduction-to-red-team/" />
+
+
+
+
+
+<link rel="stylesheet" href="https://wizoutsugar.github.io/assets/style.css" />
+
+<link rel="stylesheet" href="https://wizoutsugar.github.io/style.css" />
+
+
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="https://wizoutsugar.github.io/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="https://wizoutsugar.github.io/img/favicon.png" />
+
+
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://wizoutsugar.github.io/"/>
+
+<meta name="twitter:title" content="Introduction To Red Team"/>
+<meta name="twitter:description" content="1. Red Team  The purpose of a red team is to simulate a genuine, real-life threat to an organisation to improve people, processes and technology. They&rsquo;re given a specific goal:  Demonstrating access to business-critical information or measure blue teams&#39; detection and response policies and will identify gaps in the organisation&rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization."/>
+
+
+
+<meta property="og:title" content="Introduction To Red Team" />
+<meta property="og:description" content="1. Red Team  The purpose of a red team is to simulate a genuine, real-life threat to an organisation to improve people, processes and technology. They&rsquo;re given a specific goal:  Demonstrating access to business-critical information or measure blue teams&#39; detection and response policies and will identify gaps in the organisation&rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wizoutsugar.github.io/posts/2021/10/introduction-to-red-team/" /><meta property="og:image" content="https://wizoutsugar.github.io/"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-31T00:00:00+00:00" />
+
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a
+  href="https://wizoutsugar.github.io/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >$ cd /notes/</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="https://wizoutsugar.github.io/about">About</a></li>
+        
+      
+        
+          <li><a href="https://wizoutsugar.github.io/posts">Blog</a></li>
+        
+      
+        
+          <li><a href="https://wizoutsugar.github.io/categories">Categories</a></li>
+        
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="https://wizoutsugar.github.io/about">About</a></li>
+      
+    
+      
+        <li><a href="https://wizoutsugar.github.io/posts">Blog</a></li>
+      
+    
+      
+        <li><a href="https://wizoutsugar.github.io/categories">Categories</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h1 class="post-title">Introduction To Red Team</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2021-10-31
+        </span>
+
+        
+          
+        
+      
+
+      
+        <span class="post-author"
+          >— Written by WizoutSugar</span
+        >
+
+
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          <a href="https://wizoutsugar.github.io/tags/redteam/">#redteam</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+      <!-- raw HTML omitted -->
+<h1 id="1-red-team">1. Red Team</h1>
+<ul>
+<li>The purpose of a red team is to <strong>simulate a genuine, real-life threat</strong> to an organisation to improve people, processes and technology.</li>
+<li>They&rsquo;re given a <strong>specific goal</strong>:
+<ul>
+<li>Demonstrating access to business-critical information or measure blue teams' detection and response policies and will identify gaps in the <strong>organisation&rsquo;s defences</strong>, <strong>monitoring</strong> and <strong>incident response</strong> capabilities to reach that goal.</li>
+</ul>
+</li>
+<li>Red Team Exercises focus on an end-to-end assessment of the entire organization.
+<ul>
+<li>At the end of an engagement, Red Team <strong>will work with the organisation</strong> on <strong>how they can better</strong> <strong>detect and respond</strong> to such <strong>tactics and techniques</strong> in the future.</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-framework-and-methodology">2. Framework and Methodology</h1>
+<ul>
+<li>There are many Red Team frameworks availabe for public use. Can use one of these frameworks to create your own internal methodology for performing Red Team Exercises.</li>
+</ul>
+<h4 id="21-the-cyber-kill-chain">2.1 The Cyber Kill Chain</h4>
+
+  <img src="https://wizoutsugar.github.io/img/RedTeam/CyberKillChain.jpg"  class="left"  />
+
+
+<ol>
+<li>Reconnaissance
+<ul>
+<li>Attackers gather information about their target. Identify one person to target and then plan their avenue of attack.</li>
+</ul>
+</li>
+<li>Weaponization
+<ul>
+<li>Attackers create an attack that exploits vulnerabilities found in reconnaissance.</li>
+</ul>
+</li>
+<li>Delivery
+<ul>
+<li>Attackers select their delivery method after choosing which tools are best suited to exploit your vulnerabilities</li>
+</ul>
+</li>
+<li>Exploitation
+<ul>
+<li>The weapon has been delivered. The attacker just needs to execute the attack.</li>
+</ul>
+</li>
+<li>Installation
+<ul>
+<li>The attackers gain better access.</li>
+</ul>
+</li>
+<li>Command and Control
+<ul>
+<li>The attackers now set up persistent access to the target&rsquo;s system for remote manipulation.</li>
+</ul>
+</li>
+<li>Actions on Objectives
+<ul>
+<li>The attackers achieve their intrusion objective. Ex: Data Exfiltration.</li>
+</ul>
+</li>
+</ol>
+<h4 id="22-the-unified-kill-chain">2.2 The Unified Kill Chain</h4>
+
+  <img src="https://wizoutsugar.github.io/img/RedTeam/UCKC.jpg"  class="left"  />
+
+
+<ol>
+<li>Reconnaissance
+<ul>
+<li>Research, identification, and selection of targets using active or passive reconnaissance.</li>
+</ul>
+</li>
+<li>Weaponization
+<ul>
+<li>Coupling a remote access trojan with an exploit into a deliverable payload.</li>
+</ul>
+</li>
+<li>Defense Evasion
+<ul>
+<li>Techniques may use for evading detection or avoiding defenses.</li>
+</ul>
+</li>
+<li>Delivery
+<ul>
+<li>Transmit the payload to the targeted environment.</li>
+</ul>
+</li>
+<li>Exploitation
+<ul>
+<li>Exploit vulnerabilities in systems.</li>
+</ul>
+</li>
+<li>Persistence</li>
+<li>Command &amp; Control
+<ul>
+<li>Communicate with controlled systems.</li>
+</ul>
+</li>
+<li>Pivoting
+<ul>
+<li>Tunneling traffic through controlled system.</li>
+</ul>
+</li>
+<li>Privilege Escalation
+<ul>
+<li>Gain a higher permissions on a system.</li>
+</ul>
+</li>
+<li>Discovery
+<ul>
+<li>Gain knowledge about a system and its internal network.</li>
+</ul>
+</li>
+<li>Lateral Movement
+<ul>
+<li>Access and control remote systems on a network.</li>
+</ul>
+</li>
+<li>Execution
+<ul>
+<li>Execute code on a local or remote system.</li>
+</ul>
+</li>
+<li>Credential Access
+<ul>
+<li>Access or control over system, service or domain credentials.</li>
+</ul>
+</li>
+<li>Target Manipulation
+<ul>
+<li>Manioulate of the target system to achive the objective of the attack.</li>
+</ul>
+</li>
+<li>Collection
+<ul>
+<li>Identify and gather information from a target network prior to exfiltration.</li>
+</ul>
+</li>
+<li>Exfiltration
+<ul>
+<li>Remove, collect files and information from a target network.</li>
+</ul>
+</li>
+</ol>
+<h1 id="3-red-team-exercise-phases">3. Red Team Exercise Phases</h1>
+<ul>
+<li>The hybrid approach is:</li>
+</ul>
+<ol>
+<li>Threat Intelligence</li>
+<li>Planning</li>
+<li>Testing</li>
+<li>Closure</li>
+</ol>
+<h4 id="31-threat-intelligence">3.1 Threat Intelligence</h4>
+<ul>
+<li>The Red Team Exercise starts with a Threat Intelligence phase.</li>
+<li>The Threat Intelligence analyses and reviews applicable threat intelligence and uses this information to <strong>develop scenarios</strong> and draft a penetration <strong>test plan</strong>.</li>
+</ul>
+
+  <img src="https://wizoutsugar.github.io/img/RedTeam/ThreatIntelligence.jpg"  class="left"  />
+
+
+<ol>
+<li>Understand the target Organization
+<ul>
+<li>Very Important to understand the target Organization.</li>
+</ul>
+</li>
+<li>Identify the Adversary want to emulate
+<ul>
+<li>Depending on the target, should consider the adversary&rsquo;s capability, intent and opportunity.</li>
+<li>If the taregt is new to Adversary Emulations, start with the lower actors.</li>
+</ul>
+</li>
+<li>Gather Threat Intelligence about the Adversary</li>
+<li>Extract TTPs
+<ul>
+<li>Start at the tactical level with the adversary techincal goal and move to the techniques.</li>
+</ul>
+</li>
+<li>Analyz and Organize
+<ul>
+<li>After extracting the TTPs, match them to a framework.</li>
+</ul>
+</li>
+<li>Create an Adversary Emulations Plan</li>
+<li>Emulate the Adversary
+<ul>
+<li>The Red Team Exercise execution begins.</li>
+</ul>
+</li>
+</ol>
+<h4 id="32-planning-phase">3.2 Planning phase</h4>
+<ul>
+<li>It covers test preparation activities. This is to ensure risks are managed and test objectives are achieved.</li>
+</ul>
+<ol>
+<li>Triggers:
+<ul>
+<li>When and why is a Red Team Exercise being requested?</li>
+</ul>
+</li>
+<li>Objectives:
+<ul>
+<li>What are the objectives of the Adversary Emulation?</li>
+</ul>
+</li>
+<li>Scope:
+<ul>
+<li>Scenario, TTPs and Metrics</li>
+</ul>
+</li>
+<li>Trusted Agents:
+<ul>
+<li>A limited number of stakeholders aware of the exercise.</li>
+</ul>
+</li>
+<li>Roles and Responsibilities</li>
+<li>Rules of Engagement</li>
+</ol>
+<h4 id="33-testing-phase">3.3 Testing phase</h4>
+<ol>
+<li>
+<p>Red Team Planning</p>
+<ul>
+<li>Fill any planning gaps</li>
+<li>Attack Infrastructure
+<ul>
+<li>Setting up infrastructure should begin as early as possible.</li>
+<li>The infrastructure should never be used for more than exercise.</li>
+<li>The steps a team should take to build an Attack Infrastructure:
+<ol>
+<li>Choose external hosting service providers. Ex: AWS</li>
+<li>Purchase domain names.</li>
+<li>Generate domain certificates.</li>
+<li>Setup mail servers.</li>
+<li>Setup phishing and credential theft sites.</li>
+<li>Setup long and short Haul C2.</li>
+<li>Configure custom C2 tooling.</li>
+<li>Test external C2 communication.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>Reconnaissance
+<ul>
+<li>Focused on specific items to obtaining initial access.</li>
+</ul>
+</li>
+<li>Social Engineering</li>
+<li>Weaponization
+<ul>
+<li>Create payloads and document the IoC that the attack will have.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Initial Access / Foothold</p>
+</li>
+<li>
+<p>Network Propagation</p>
+</li>
+<li>
+<p>Action on Objective</p>
+</li>
+</ol>
+
+    </div>
+    
+
+    
+      
+    
+  </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">WizoutSugar © 2021</div>
+      
+  </div>
+</footer>
+
+<script src="https://wizoutsugar.github.io/assets/main.js"></script>
+<script src="https://wizoutsugar.github.io/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>

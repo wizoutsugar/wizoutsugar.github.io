@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>redteam on WizoutSugar&#39;s Blog</title>
+    
+    
+    
+    <link>https://wizoutsugar.github.io/tags/redteam/</link>
+    <description>Recent content in redteam on WizoutSugar&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>WizoutSugar © 2021</copyright>
+    <lastBuildDate>Sun, 31 Oct 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://wizoutsugar.github.io/tags/redteam/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introduction To Red Team</title>
+      <link>https://wizoutsugar.github.io/posts/2021/10/introduction-to-red-team/</link>
+      <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wizoutsugar.github.io/posts/2021/10/introduction-to-red-team/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          1. Red Team  The purpose of a red team is to simulate a genuine, real-life threat to an organisation to improve people, processes and technology. They&amp;rsquo;re given a specific goal:  Demonstrating access to business-critical information or measure blue teams&#39; detection and response policies and will identify gaps in the organisation&amp;rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization.
+          
+        
+        </description>
+    </item>
+    
+  </channel>
+</rss>
