@@ -11,7 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta
   name="description"
-  content="1. Red Team  The purpose of a red team is to simulate a genuine, real-life threat to an organisation to improve people, processes and technology. They&amp;rsquo;re given a specific goal:  Demonstrating access to business-critical information or measure blue teams&#39; detection and response policies and will identify gaps in the organisation&amp;rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization."
+  content="1. Red Team Operations  A team-based exercise to simulate or emulate a genuine, real-life threat (TTPs) to an organisation to improve people, processes and technology. They&amp;rsquo;re given a specific goal:  Demonstrating access to business-critical information, measure blue teams&#39; detection &amp;amp; response policies. Identify gaps in the organisation&amp;rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization."
 />
 <meta
   name="keywords"
@@ -49,12 +49,12 @@
 <meta name="twitter:image" content="https://wizoutsugar.github.io/"/>
 
 <meta name="twitter:title" content="Introduction To Red Team"/>
-<meta name="twitter:description" content="1. Red Team  The purpose of a red team is to simulate a genuine, real-life threat to an organisation to improve people, processes and technology. They&rsquo;re given a specific goal:  Demonstrating access to business-critical information or measure blue teams&#39; detection and response policies and will identify gaps in the organisation&rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization."/>
+<meta name="twitter:description" content="1. Red Team Operations  A team-based exercise to simulate or emulate a genuine, real-life threat (TTPs) to an organisation to improve people, processes and technology. They&rsquo;re given a specific goal:  Demonstrating access to business-critical information, measure blue teams&#39; detection &amp; response policies. Identify gaps in the organisation&rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization."/>
 
 
 
 <meta property="og:title" content="Introduction To Red Team" />
-<meta property="og:description" content="1. Red Team  The purpose of a red team is to simulate a genuine, real-life threat to an organisation to improve people, processes and technology. They&rsquo;re given a specific goal:  Demonstrating access to business-critical information or measure blue teams&#39; detection and response policies and will identify gaps in the organisation&rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization." />
+<meta property="og:description" content="1. Red Team Operations  A team-based exercise to simulate or emulate a genuine, real-life threat (TTPs) to an organisation to improve people, processes and technology. They&rsquo;re given a specific goal:  Demonstrating access to business-critical information, measure blue teams&#39; detection &amp; response policies. Identify gaps in the organisation&rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://wizoutsugar.github.io/posts/2021/10/introduction-to-red-team/" /><meta property="og:image" content="https://wizoutsugar.github.io/"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-10-31T00:00:00+00:00" />
@@ -194,162 +194,215 @@
 
     <div class="post-content">
       
-      <h1 id="1-red-team">1. Red Team</h1>
+      <h1 id="1-red-team-operations">1. Red Team Operations</h1>
 <ul>
-<li>The purpose of a red team is to <strong>simulate a genuine, real-life threat</strong> to an organisation to improve people, processes and technology.</li>
+<li>A team-based exercise to <strong>simulate or emulate a genuine, real-life threat (TTPs)</strong> to an organisation to improve <strong>people, processes and technology</strong>.</li>
 <li>They&rsquo;re given a <strong>specific goal</strong>:
 <ul>
-<li>Demonstrating access to business-critical information or measure blue teams' detection and response policies and will identify gaps in the <strong>organisation&rsquo;s defences</strong>, <strong>monitoring</strong> and <strong>incident response</strong> capabilities to reach that goal.</li>
+<li>Demonstrating access to business-critical information, measure blue teams' detection &amp; response policies.</li>
+<li>Identify gaps in the <strong>organisation&rsquo;s defences</strong>, <strong>monitoring</strong> and <strong>incident response</strong> capabilities to reach that goal.</li>
 </ul>
 </li>
-<li>Red Team Exercises focus on an end-to-end assessment of the entire organization.
+<li>Red Team Exercises focus on an <strong>end-to-end assessment</strong> of the entire organization.
 <ul>
 <li>At the end of an engagement, Red Team <strong>will work with the organisation</strong> on <strong>how they can better</strong> <strong>detect and respond</strong> to such <strong>tactics and techniques</strong> in the future.</li>
 </ul>
 </li>
 </ul>
-<h1 id="2-framework-and-methodology">2. Framework and Methodology</h1>
+<h2 id="11-red-team-vs-penetration-test">1.1 Red Team VS Penetration Test</h2>
+<table>
+<thead>
+<tr>
+<th>Red Teaming</th>
+<th>Penetration Test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Have a clear objective defined by the organisation.</td>
+<td>Focus on a single technology stack.</td>
+</tr>
+<tr>
+<td>Emulate a real-life threat to the organisation.</td>
+<td>The goals are to identify as many vulnerabilities as possible.</td>
+</tr>
+<tr>
+<td>Look holistically at the overall security posture of an organisation.</td>
+<td>Output is a report containing each vulnerability and remediation actions.</td>
+</tr>
+<tr>
+<td>Put a heavy emphasis on stealth.</td>
+<td>There is no explicit focus on detection or response.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-technology-people-processes-and-procedural-controls">1.2 Technology, people, processes and procedural controls</h2>
+<p><strong>When execute a phishing campaign:</strong></p>
 <ul>
-<li>There are many Red Team frameworks availabe for public use. Can use one of these frameworks to create your own internal methodology for performing Red Team Exercises.</li>
+<li><strong>Technology</strong>: Maybe expecting the company has a mail gateway to put the email in the SPAM folder.</li>
+<li><strong>People</strong>: How many employees were able to identify or discover the phishing campaign.</li>
+<li><strong>Processes</strong>: When a user discover the phishing campaign, what process does the company has in place for employees to report the attack.</li>
+<li><strong>procedural</strong>: When a user submit the mail to an analyst what procedural does the company has in place for the analyst to contain the attack.</li>
 </ul>
-<h4 id="21-the-cyber-kill-chain">2.1 The Cyber Kill Chain</h4>
+<h1 id="2-frameworks-and-methodologies">2. Frameworks and Methodologies</h1>
+<ul>
+<li>There are many Red Team frameworks availabe for public use.</li>
+<li>Red Teamers can use one of these frameworks as a strating point to design the scope of operation.</li>
+</ul>
+<h2 id="21-the-cyber-kill-chain">2.1 The Cyber Kill Chain</h2>
+<p><strong>Advanced Persistent Threat:</strong></p>
+<ul>
+<li>Advanced: The team who is very well focused and organized.</li>
+<li>Persistent: Establishes an illicit, long-term presence on a network.</li>
+<li>Threat: A person with intent, opportunity and capability to execute an operation.</li>
+</ul>
 
   <img src="https://wizoutsugar.github.io/img/RedTeam/CyberKillChain.jpg"  class="left"  />
 
 
 <ol>
-<li>Reconnaissance
+<li><strong>Reconnaissance:</strong>
 <ul>
-<li>Attackers gather information about their target. Identify one person to target and then plan their avenue of attack.</li>
+<li>Gather information about the target. Identify one person to target and then plan their avenue of attack.</li>
 </ul>
 </li>
-<li>Weaponization
+<li><strong>Weaponization:</strong>
 <ul>
-<li>Attackers create an attack that exploits vulnerabilities found in reconnaissance.</li>
+<li>Create an attack that exploits vulnerabilities found in reconnaissance.</li>
 </ul>
 </li>
-<li>Delivery
+<li><strong>Delivery:</strong>
 <ul>
-<li>Attackers select their delivery method after choosing which tools are best suited to exploit your vulnerabilities</li>
+<li>Select a delivery method after choosing which tools are best suited to exploit your vulnerabilities.</li>
 </ul>
 </li>
-<li>Exploitation
+<li><strong>Exploitation:</strong>
 <ul>
-<li>The weapon has been delivered. The attacker just needs to execute the attack.</li>
+<li>The weapon has been delivered. The APT exploits a vulnerability on a system to get initial access.</li>
 </ul>
 </li>
-<li>Installation
+<li><strong>Installation:</strong>
 <ul>
-<li>The attackers gain better access.</li>
+<li>The APT installs a malware gain better access.</li>
 </ul>
 </li>
-<li>Command and Control
+<li><strong>Command and Control:</strong>
 <ul>
-<li>The attackers now set up persistent access to the target&rsquo;s system for remote manipulation.</li>
+<li>The APT now set up persistent access to the target&rsquo;s system for remote manipulation.</li>
 </ul>
 </li>
-<li>Actions on Objectives
+<li><strong>Actions on Objectives:</strong>
 <ul>
-<li>The attackers achieve their intrusion objective. Ex: Data Exfiltration.</li>
+<li>The APT achieve their intrusion objective. Ex: Data Exfiltration.</li>
 </ul>
 </li>
 </ol>
-<h4 id="22-the-unified-kill-chain">2.2 The Unified Kill Chain</h4>
+<h2 id="22-attck-framework---mitre">2.2 ATT&amp;CK Framework - MITRE</h2>
+<ul>
+<li>It has the phases of the attack as tactics.
+
+  <img src="https://wizoutsugar.github.io/img/RedTeam/ATT&amp;CK.jpg"  class="left"  />
+
+
+
+  <img src="https://wizoutsugar.github.io/img/RedTeam/tactics.jpg"  class="left"  />
+
+</li>
+</ul>
+<h2 id="23-the-unified-kill-chain">2.3 The Unified Kill Chain</h2>
 
   <img src="https://wizoutsugar.github.io/img/RedTeam/UCKC.jpg"  class="left"  />
 
 
 <ol>
-<li>Reconnaissance
+<li>Reconnaissance:
 <ul>
 <li>Research, identification, and selection of targets using active or passive reconnaissance.</li>
 </ul>
 </li>
-<li>Weaponization
+<li>Weaponization:
 <ul>
 <li>Coupling a remote access trojan with an exploit into a deliverable payload.</li>
 </ul>
 </li>
-<li>Defense Evasion
+<li>Defense Evasion:
 <ul>
 <li>Techniques may use for evading detection or avoiding defenses.</li>
 </ul>
 </li>
-<li>Delivery
+<li>Delivery:
 <ul>
 <li>Transmit the payload to the targeted environment.</li>
 </ul>
 </li>
-<li>Exploitation
+<li>Exploitation:
 <ul>
 <li>Exploit vulnerabilities in systems.</li>
 </ul>
 </li>
-<li>Persistence</li>
-<li>Command &amp; Control
+<li>Persistence:</li>
+<li>Command &amp; Control:
 <ul>
 <li>Communicate with controlled systems.</li>
 </ul>
 </li>
-<li>Pivoting
+<li>Pivoting:
 <ul>
 <li>Tunneling traffic through controlled system.</li>
 </ul>
 </li>
-<li>Privilege Escalation
+<li>Privilege Escalation:
 <ul>
 <li>Gain a higher permissions on a system.</li>
 </ul>
 </li>
-<li>Discovery
+<li>Discovery:
 <ul>
 <li>Gain knowledge about a system and its internal network.</li>
 </ul>
 </li>
-<li>Lateral Movement
+<li>Lateral Movement:
 <ul>
 <li>Access and control remote systems on a network.</li>
 </ul>
 </li>
-<li>Execution
+<li>Execution:
 <ul>
 <li>Execute code on a local or remote system.</li>
 </ul>
 </li>
-<li>Credential Access
+<li>Credential Access:
 <ul>
 <li>Access or control over system, service or domain credentials.</li>
 </ul>
 </li>
-<li>Target Manipulation
+<li>Target Manipulation:
 <ul>
 <li>Manioulate of the target system to achive the objective of the attack.</li>
 </ul>
 </li>
-<li>Collection
+<li>Collection:
 <ul>
 <li>Identify and gather information from a target network prior to exfiltration.</li>
 </ul>
 </li>
-<li>Exfiltration
+<li>Exfiltration:
 <ul>
 <li>Remove, collect files and information from a target network.</li>
 </ul>
 </li>
 </ol>
 <h1 id="3-red-team-exercise-phases">3. Red Team Exercise Phases</h1>
-<ul>
-<li>The hybrid approach is:</li>
-</ul>
+<p><strong>The hybrid approach is:</strong></p>
 <ol>
 <li>Threat Intelligence</li>
 <li>Planning</li>
 <li>Testing</li>
 <li>Closure</li>
 </ol>
-<h4 id="31-threat-intelligence">3.1 Threat Intelligence</h4>
+<h2 id="31-threat-intelligence">3.1 Threat Intelligence</h2>
+<p>The Red Team Exercise starts with a Threat Intelligence phase.</p>
 <ul>
-<li>The Red Team Exercise starts with a Threat Intelligence phase.</li>
 <li>The Threat Intelligence analyses and reviews applicable threat intelligence and uses this information to <strong>develop scenarios</strong> and draft a penetration <strong>test plan</strong>.</li>
 </ul>
 
@@ -386,10 +439,8 @@
 </ul>
 </li>
 </ol>
-<h4 id="32-planning-phase">3.2 Planning phase</h4>
-<ul>
-<li>It covers test preparation activities. This is to ensure risks are managed and test objectives are achieved.</li>
-</ul>
+<h2 id="32-planning-phase">3.2 Planning phase</h2>
+<p>It covers test preparation activities. This is to ensure risks are managed and test objectives are achieved.</p>
 <ol>
 <li>Triggers:
 <ul>
@@ -414,7 +465,7 @@
 <li>Roles and Responsibilities</li>
 <li>Rules of Engagement</li>
 </ol>
-<h4 id="33-testing-phase">3.3 Testing phase</h4>
+<h2 id="33-testing-phase">3.3 Testing phase</h2>
 <ol>
 <li>
 <p>Red Team Planning</p>
