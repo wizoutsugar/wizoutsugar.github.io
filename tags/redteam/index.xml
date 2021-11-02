@@ -16,6 +16,29 @@
     
     
     <item>
+      <title>Initial Access</title>
+      <link>https://wizoutsugar.github.io/posts/2021/10/initial-access/</link>
+      <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wizoutsugar.github.io/posts/2021/10/initial-access/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          It represents the techniques adversaries may use to gain an initial foothold within a network. One of the most complex and time-consuming aspects of a red team operation. It may be accomplished via various methods:
+  Exploitation:
+ Drive-by Compromise: Exploiting a user visiting a website. Exploit Public-Facing Application. External Remote Service: Exploit or find a valid account for services like VPNs, Citrix..etc.    Hardware:
+ Through Removable Media.
+          
+        
+        </description>
+    </item>
+    
+    <item>
       <title>Introduction To Red Team</title>
       <link>https://wizoutsugar.github.io/posts/2021/10/introduction-to-red-team/</link>
       <pubDate>Sun, 31 Oct 2021 00:00:00 +0000</pubDate>
@@ -29,7 +52,7 @@
         
         
         
-          1. Red Team  The purpose of a red team is to simulate a genuine, real-life threat to an organisation to improve people, processes and technology. They&amp;rsquo;re given a specific goal:  Demonstrating access to business-critical information or measure blue teams&#39; detection and response policies and will identify gaps in the organisation&amp;rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization.
+          1. Red Team Operations  A team-based exercise to simulate or emulate a genuine, real-life threat (TTPs) to an organisation to improve people, processes and technology. They&amp;rsquo;re given a specific goal:  Demonstrating access to business-critical information, measure blue teams&#39; detection &amp;amp; response policies. Identify gaps in the organisation&amp;rsquo;s defences, monitoring and incident response capabilities to reach that goal.   Red Team Exercises focus on an end-to-end assessment of the entire organization.
           
         
         </description>
