@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>
+        Initial Access ::
+        WizoutSugar&#39;s Blog
+      </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="It represents the techniques adversaries may use to gain an initial foothold within a network. One of the most complex and time-consuming aspects of a red team operation. It may be accomplished via various methods:
+  Exploitation:
+ Drive-by Compromise: Exploiting a user visiting a website. Exploit Public-Facing Application. External Remote Service: Exploit or find a valid account for services like VPNs, Citrix..etc.    Hardware:
+ Through Removable Media."
+/>
+<meta
+  name="keywords"
+  content=""
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://wizoutsugar.github.io/posts/2021/10/initial-access/" />
+
+
+
+
+
+<link rel="stylesheet" href="https://wizoutsugar.github.io/assets/style.css" />
+
+<link rel="stylesheet" href="https://wizoutsugar.github.io/style.css" />
+
+
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="https://wizoutsugar.github.io/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="https://wizoutsugar.github.io/img/favicon.png" />
+
+
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://wizoutsugar.github.io/"/>
+
+<meta name="twitter:title" content="Initial Access"/>
+<meta name="twitter:description" content="It represents the techniques adversaries may use to gain an initial foothold within a network. One of the most complex and time-consuming aspects of a red team operation. It may be accomplished via various methods:
+  Exploitation:
+ Drive-by Compromise: Exploiting a user visiting a website. Exploit Public-Facing Application. External Remote Service: Exploit or find a valid account for services like VPNs, Citrix..etc.    Hardware:
+ Through Removable Media."/>
+
+
+
+<meta property="og:title" content="Initial Access" />
+<meta property="og:description" content="It represents the techniques adversaries may use to gain an initial foothold within a network. One of the most complex and time-consuming aspects of a red team operation. It may be accomplished via various methods:
+  Exploitation:
+ Drive-by Compromise: Exploiting a user visiting a website. Exploit Public-Facing Application. External Remote Service: Exploit or find a valid account for services like VPNs, Citrix..etc.    Hardware:
+ Through Removable Media." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wizoutsugar.github.io/posts/2021/10/initial-access/" /><meta property="og:image" content="https://wizoutsugar.github.io/"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-31T00:00:00+00:00" />
+
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a
+  href="https://wizoutsugar.github.io/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >$ cd /notes/</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="https://wizoutsugar.github.io/about">About</a></li>
+        
+      
+        
+          <li><a href="https://wizoutsugar.github.io/posts">Blog</a></li>
+        
+      
+        
+          <li><a href="https://wizoutsugar.github.io/categories">Categories</a></li>
+        
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="https://wizoutsugar.github.io/about">About</a></li>
+      
+    
+      
+        <li><a href="https://wizoutsugar.github.io/posts">Blog</a></li>
+      
+    
+      
+        <li><a href="https://wizoutsugar.github.io/categories">Categories</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h1 class="post-title">Initial Access</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2021-10-31
+        </span>
+
+        
+          
+        
+      
+
+      
+        <span class="post-author"
+          >— Written by WizoutSugar</span
+        >
+
+
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          <a href="https://wizoutsugar.github.io/tags/redteam/">#redteam</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+      <p>It represents the techniques adversaries may use to gain an initial foothold within a network. One of the most complex and time-consuming aspects of a red team operation. It may be accomplished via various methods:</p>
+<ol>
+<li>
+<p><strong>Exploitation:</strong></p>
+<ul>
+<li>Drive-by Compromise: Exploiting a user visiting a website.</li>
+<li>Exploit Public-Facing Application.</li>
+<li>External Remote Service: Exploit or find a valid account for services like VPNs, Citrix..etc.</li>
+</ul>
+</li>
+<li>
+<p><strong>Hardware:</strong></p>
+<ul>
+<li>Through Removable Media.</li>
+</ul>
+</li>
+<li>
+<p><strong>Phishing:</strong></p>
+<ul>
+<li>Spear Phishing Attachment</li>
+<li>Spear Phishing Link</li>
+<li>Spear Phishing via Service: Use of third-party services.</li>
+</ul>
+</li>
+<li>
+<p><strong>Supply Chain Compromise:</strong></p>
+<ul>
+<li>Manipulate products or product delivery mechanisms prior to receipt by a final consumer for the purpose of data or system compromise. Ex. SolarWinds</li>
+</ul>
+</li>
+<li>
+<p><strong>Trusted Relationship:</strong></p>
+<ul>
+<li>Breach or leverage organizations that have access to intended victims.</li>
+</ul>
+</li>
+<li>
+<p><strong>Valid Accounts:</strong></p>
+<ul>
+<li>May have access using capture credentials got earlier in the reconnaissance phase.</li>
+<li>Or using an account provided by the company.</li>
+</ul>
+</li>
+</ol>
+<h1 id="1-initial-access-phases">1. Initial Access Phases</h1>
+<ul>
+<li><strong>Reconnaissance</strong></li>
+<li><strong>Build an attack infrastructure</strong></li>
+<li><strong>Weaponize payloads</strong></li>
+<li><strong>Social Engineer to deliver payload</strong></li>
+<li><strong>Exploit a system to gain access</strong></li>
+</ul>
+<h2 id="11-reconnaissance">1.1 Reconnaissance</h2>
+<p>Research, identification, and selection of targets using active or passive reconnaissance.</p>
+<ul>
+<li>The team uses this phase to collect and process information about the target organization, the industry it operates in and the target landscape of specific countries where the organization operates.</li>
+<li>Once the team understands the organization, they can then identify and classify the types of adversary(s) most likely to attack the organization.</li>
+<li>The team then analyzes and organizes the TTPs being use with adversaries.</li>
+<li>The team uses this data to execute better reconnaissance activities.</li>
+<li>Should have a better understanding of the target&rsquo;s:
+<ol>
+<li>Network architecture: Domain names, DNS.</li>
+<li>IP Space: IP Addresses owned and live hosts.</li>
+<li>Technology Solutions: OSs, Servers, client application.</li>
+<li>Email format and infrastructure.</li>
+<li>Security Proccedures: Controls need to bypass.</li>
+<li>People and culture.</li>
+</ol>
+</li>
+</ul>
+<h3 id="1-passive-reconnaissance">1. Passive Reconnaissance</h3>
+<ul>
+<li>The team uses passive reconnaissance techniques to gather information without actively interacting with the target organization&rsquo;s systems.</li>
+<li>Places to look for phishing:
+<ul>
+<li>LinkedIn</li>
+<li>Facebook</li>
+<li>Twitter</li>
+<li>Departement heads (HR, C-Level)</li>
+</ul>
+</li>
+<li>Information from Job Postings:
+<ul>
+<li>Software</li>
+<li>Vendor</li>
+<li>Appliance information</li>
+</ul>
+</li>
+<li>Credentials from previous/unknown data breaches.</li>
+</ul>
+<h3 id="2-active-reconnaissance">2. Active Reconnaissance</h3>
+<ul>
+<li>
+<p>The team uses active reconnaissance techniques to gather information either directly or indirectly interacting with the target organization&rsquo;s systems.</p>
+</li>
+<li>
+<p>Some of the information need to be gathered:</p>
+<ul>
+<li>Company websites</li>
+<li>Network block</li>
+<li>DNS information</li>
+<li>Domian name(s)</li>
+<li>Subdomain names</li>
+</ul>
+</li>
+<li>
+<p>Mail Infrastructre information:</p>
+<ul>
+<li>SPF</li>
+<li>DKIM</li>
+<li>DMARC</li>
+<li>PTR</li>
+</ul>
+</li>
+<li>
+<p>Some website/Tools that can be used the passive and active reconnaissance:</p>
+<ul>
+<li><a href="https://phonebook.cz/">Phonebook</a>: Collect emails and domains.</li>
+<li><a href="https://hunter.io/">Hunter</a>: Collect emails.</li>
+<li><a href="https://viewdns.info/">ViewDNS</a>: Collect DNS information.</li>
+<li><a href="https://shodan.io/">Shodan</a>: Collect information about the target.</li>
+<li><a href="https://zoomeye.org/">ZoomEye</a>: Like Shodan, Collect information about the target.</li>
+<li><a href="https://Spyse.com/">Spyse</a>: Like Shodan, Collect information about the target.</li>
+<li><a href="https://Spiderfoot.net/">Spiderfoot</a>: open source intelligence (OSINT) automation tool.</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-attack-infrastructure">1.2 Attack Infrastructure</h2>
+<p>Techniques that involve adversaries creating, purchasing or compromising resoureces that can be used to support targeting.</p>
+<ul>
+<li>Some of activities in thi phase is:
+<ul>
+<li>Purchasing VPS hosts</li>
+<li>Purchasing domain names</li>
+<li>Setting up mail servers</li>
+<li>Researching sites to target for phishing campaigns</li>
+</ul>
+</li>
+<li>Build a C2 infrastructre, need to implement:
+<ul>
+<li>Redirectors</li>
+<li>Domain fronting</li>
+<li>Web Categorization</li>
+<li>SPF, DKIM, DMARC for SMTP servers</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-redirectors">1. Redirectors</h3>
+<ul>
+<li>Systems places infront of C2 Servers to hide them from direct interaction with targets.</li>
+</ul>
+
+    </div>
+    
+
+    
+      
+    
+  </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">WizoutSugar © 2021</div>
+      
+  </div>
+</footer>
+
+<script src="https://wizoutsugar.github.io/assets/main.js"></script>
+<script src="https://wizoutsugar.github.io/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>
