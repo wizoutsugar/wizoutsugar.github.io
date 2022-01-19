@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>
+        Network Propagation ::
+        WizoutSugar&#39;s Blog
+      </title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Once the initial foodhold is obtained, post-exploitation activities begin. This access will be used to learn more about the target system and network to move around and reach action on objectives. That happens by executing the following activities:
+ Discovery Privilege Escalation Presistence Defense Evasion Credential Harvesting Lateral Movement  1. Discovery  Is a tactic that allows an Red Team to gain knowledge about a system and the internal network."
+/>
+<meta
+  name="keywords"
+  content=""
+/>
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://wizoutsugar.github.io/posts/2021/12/network-propagation/" />
+
+
+
+
+
+<link rel="stylesheet" href="https://wizoutsugar.github.io/assets/style.css" />
+
+<link rel="stylesheet" href="https://wizoutsugar.github.io/style.css" />
+
+
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="https://wizoutsugar.github.io/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="https://wizoutsugar.github.io/img/favicon.png" />
+
+
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="https://wizoutsugar.github.io/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://wizoutsugar.github.io/"/>
+
+<meta name="twitter:title" content="Network Propagation"/>
+<meta name="twitter:description" content="Once the initial foodhold is obtained, post-exploitation activities begin. This access will be used to learn more about the target system and network to move around and reach action on objectives. That happens by executing the following activities:
+ Discovery Privilege Escalation Presistence Defense Evasion Credential Harvesting Lateral Movement  1. Discovery  Is a tactic that allows an Red Team to gain knowledge about a system and the internal network."/>
+
+
+
+<meta property="og:title" content="Network Propagation" />
+<meta property="og:description" content="Once the initial foodhold is obtained, post-exploitation activities begin. This access will be used to learn more about the target system and network to move around and reach action on objectives. That happens by executing the following activities:
+ Discovery Privilege Escalation Presistence Defense Evasion Credential Harvesting Lateral Movement  1. Discovery  Is a tactic that allows an Red Team to gain knowledge about a system and the internal network." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://wizoutsugar.github.io/posts/2021/12/network-propagation/" /><meta property="og:image" content="https://wizoutsugar.github.io/"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-12-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-12-02T00:00:00+00:00" />
+
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a
+  href="https://wizoutsugar.github.io/"
+  class="logo"
+  style="text-decoration: none;"
+>
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
+</svg>
+</span>
+    <span class="logo__text"
+      >$ cd /notes/</span
+    >
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="https://wizoutsugar.github.io/about">About</a></li>
+        
+      
+        
+          <li><a href="https://wizoutsugar.github.io/posts">Blog</a></li>
+        
+      
+        
+          <li><a href="https://wizoutsugar.github.io/categories">Categories</a></li>
+        
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="https://wizoutsugar.github.io/about">About</a></li>
+      
+    
+      
+        <li><a href="https://wizoutsugar.github.io/posts">Blog</a></li>
+      
+    
+      
+        <li><a href="https://wizoutsugar.github.io/categories">Categories</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  
+  
+
+  <div class="post">
+    <h1 class="post-title">Network Propagation</h1>
+    <div class="post-meta">
+      
+        <span class="post-date">
+          2021-12-02
+        </span>
+
+        
+          
+        
+      
+
+      
+        <span class="post-author"
+          >— Written by WizoutSugar</span
+        >
+
+
+      
+    </div>
+
+    
+      <span class="post-tags">
+        
+          <a href="https://wizoutsugar.github.io/tags/redteam/">#redteam</a>&nbsp;
+        
+      </span>
+    
+
+    
+
+    <div class="post-content">
+      
+      <p>Once the initial foodhold is obtained, post-exploitation activities begin. This access will be used to learn more about the target system and network to move around and reach action on objectives. That happens by executing the following activities:</p>
+<ul>
+<li>Discovery</li>
+<li>Privilege Escalation</li>
+<li>Presistence</li>
+<li>Defense Evasion</li>
+<li>Credential Harvesting</li>
+<li>Lateral Movement</li>
+</ul>
+<h2 id="1-discovery">1. Discovery</h2>
+<ul>
+<li>Is a tactic that allows an Red Team to gain knowledge about a system and the internal network.</li>
+<li>Must know what they have control of and what benefits operating from that system give to their objective or goals.
+<ul>
+<li><code>Tip 1: Use the built-in tools in initial discovery to not tigger a Blue Team IoC.</code></li>
+<li><code>Tip 2: Be careful with Deceptions --&gt; Emerging category of defense assumes the internal network or system will compromised and places &quot;Traps, Tokens&quot; on the network/system.</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="11-account-discovery">1.1 Account Discovery</h4>
+<ul>
+<li>Understand the privilege you have and what other accounts exist in the system.</li>
+</ul>
+<h4 id="12-processes-and-services">1.2 Processes and Services</h4>
+<ul>
+<li>Determine the processes and services running on the local system.</li>
+</ul>
+<h4 id="13-security-software-and-controls">1.3 Security Software and Controls</h4>
+<ul>
+<li>List the security software, configurations, defensive tools and sensors that are installed on the system.
+<ul>
+<li>Endpoint Security: AntiVirus, Application whitelisting, Endpoint Detection and Response.</li>
+<li>Logs and Log Forwarding.</li>
+<li>Windows Security Settings: Firewall, Group Policy.</li>
+</ul>
+</li>
+</ul>
+<h4 id="14-network-enumeration">1.4 Network Enumeration</h4>
+<ul>
+<li>Determine the systems in the same subnet and internal network accessible from current system.</li>
+</ul>
+<h4 id="15-active-directory-enumeration">1.5 Active Directory Enumeration</h4>
+<ul>
+<li>Enumerate number of the components like: Forest, Domain, Trust, Domain Controllers, etc.</li>
+</ul>
+<h2 id="2-privilege-escalation">2. Privilege Escalation</h2>
+<ul>
+<li>Allows us to elevate privileges from that of a standard user to Administrator/SYSTEM (Vertical) or from User A to User B (Horizontal).</li>
+<li>Can provide a tactical advantage by allowing you to leverage some additional capabilities:
+<ul>
+<li>Dumping credentials with Mimikatz.</li>
+<li>Installing sneaky persistence.</li>
+<li>Manipulating host configuration (firewall).</li>
+</ul>
+</li>
+<li>Should only be sought after if it provides a means of reaching your goal.</li>
+</ul>
+<h2 id="3-presistence">3. Presistence</h2>
+<ul>
+<li>A method of maintaining access to a compromised machine, without having to exploit the initial compromise steps (phishing or exploitation) all over again.</li>
+<li>Most persistence will require making a some configuration change or dropping a payload to disk, which is why they can carry a high risk of detection.</li>
+</ul>
+<h2 id="4-defense-evasion">4. Defense Evasion</h2>
+<ul>
+<li>A tactic with multiple techniques to evade detection or avoid controls.</li>
+</ul>
+<h2 id="5-credential-harvesting">5. Credential Harvesting</h2>
+<ul>
+<li>A tactic used to get passwords that maybe stored in a variety of different areas.</li>
+</ul>
+<h2 id="6-lateral-movement">6. Lateral Movement</h2>
+<ul>
+<li>Attempt to gain access to other endpoints on the same network or pivot onto other network segments.</li>
+</ul>
+
+    </div>
+    
+
+    
+      
+    
+  </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">WizoutSugar © 2021</div>
+      
+  </div>
+</footer>
+
+<script src="https://wizoutsugar.github.io/assets/main.js"></script>
+<script src="https://wizoutsugar.github.io/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>
