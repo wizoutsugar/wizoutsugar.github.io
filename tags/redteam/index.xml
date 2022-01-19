@@ -10,10 +10,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>WizoutSugar © 2021</copyright>
-    <lastBuildDate>Sun, 31 Oct 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 02 Dec 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://wizoutsugar.github.io/tags/redteam/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Action on Objectives</title>
+      <link>https://wizoutsugar.github.io/posts/2021/12/action-on-objectives/</link>
+      <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wizoutsugar.github.io/posts/2021/12/action-on-objectives/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          The final phase of the Unified Kill Chain. These TTPs will depend on the goals and objectives of the exercise.
+ As a red teamer, you need to find the &amp;ldquo;objective&amp;rdquo; of your operation and then prove access to that objective to your client.  1. Collection  Tactic used to identify and gather data from target network.  2. Data Staging  Move collected data to a central location for exfiltration.
+          
+        
+        </description>
+    </item>
+    
+    <item>
+      <title>Network Propagation</title>
+      <link>https://wizoutsugar.github.io/posts/2021/12/network-propagation/</link>
+      <pubDate>Thu, 02 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://wizoutsugar.github.io/posts/2021/12/network-propagation/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Once the initial foodhold is obtained, post-exploitation activities begin. This access will be used to learn more about the target system and network to move around and reach action on objectives. That happens by executing the following activities:
+ Discovery Privilege Escalation Presistence Defense Evasion Credential Harvesting Lateral Movement  1. Discovery  Is a tactic that allows an Red Team to gain knowledge about a system and the internal network.
+          
+        
+        </description>
+    </item>
     
     <item>
       <title>Initial Access</title>
